@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+  <title>Reviews</title>
+  <link type="text/css" href="base.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- html -->
+  <div class="reviewBlockContainer">
+    <div class="reviewBlock block1"></div>
+  </div>
+
+  <!-- handlebar template -->
+  <script id="review" type="text/x-handlebars-template">
+    <h1>Reviews ({{> length}}):</h1>
+    <p>Average Rating: <b>{{> average}} out of 5</b></p>
+    {{#each Results}}
+      <div class="review {{#if @index}}{{/if}}">
+        <span class='stars stars-{{Rating}}'>{{Rating}} out of 5</span>
+        <h1>{{Title}}</h1>
+        <p class="ellipsis multiline"><span class="date">{{#date}}{{SubmissionTime}}{{/date}}</span><br />{{ReviewText}}</p>
+      </div>
+    {{/each}}
+    <div class="seeMore">See More Reviews</div>
+  </script>
+  
+  <!-- dependencies -->
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+  <script src="js/handlebars.js" type="text/javascript"></script>
+  <script src="js/reviews.js" type="text/javascript"></script>
+  <script>
+    //pass in: SKU, number of reviews to return, selector to append reviews to 
+    $(function() { bazaarVoice.callBazaarVoice("UN60F7100AFXZA","6",".reviewBlock.block1"); });
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+body { font-family:Arial; }
+.reviewBlockContainer { width: 215px; padding:0px 25px; float: left; border-left:1px solid #ccc; margin:30px 0; font-family:'Arial','Helvetica',Sans-Serif; min-height:250px; background:url(img/ajax-loader.gif) no-repeat 25px 0; } 
+  .reviewBlock { opacity:0; background-color: #fff; }
+    .reviewBlock h1 { color:#000; font:normal 16px 'InterfaceB', 'Arial','Helvetica'; margin:0 0 3px; }
+    .reviewBlock p { color:#666666; font-size:12px; margin: 0; }
+    .reviewBlock b { font-weight:bold; }
+
+    .reviewBlock .review { margin: 20px 0 0; }
+      .reviewBlock .review .stars { color:#666; font:normal 16px 'InterfaceR', 'Arial','Helvetica'; background:url(img/stars.jpg) no-repeat 0 center; padding-left: 85px; }
+        .reviewBlock .review .stars-0 { background-position:-80px center }
+        .reviewBlock .review .stars-1 { background-position:-64px center }
+        .reviewBlock .review .stars-2 { background-position:-48px center }
+        .reviewBlock .review .stars-3 { background-position:-32px center }
+        .reviewBlock .review .stars-4 { background-position:-16px center }
+        .reviewBlock .review .stars-5 { background-position:0 center }
+      .reviewBlock .review h1 { color:#666666; font-size:14px; margin:5px 0; }
+      .reviewBlock .review p { line-height: 16px !important; white-space:normal; overflow:hidden; }
+        .reviewBlock .review p .date { color:#a5a5a5; }
+      .reviewBlock .review.hidden { display: none; }
+      .reviewBlock .review .more, .reviewBlock .review .less { color:rgb(0, 169, 224); cursor:pointer; }
+        .reviewBlock .review .more:hover, .reviewBlock .review .less:hover { color:#333; } 
+
+      .reviewBlock .seeMore { display: block; color:rgb(0, 169, 224); margin-top: 20px; font-weight:bold; cursor:pointer; font-size:12px; }
+        .reviewBlock .seeMore:hover { color:#333; }
